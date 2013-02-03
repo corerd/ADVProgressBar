@@ -3,6 +3,9 @@ ADVProgressBar design documentation
 
 On any regular repository, the **gh-pages** branch has a special meaning for GitHub:
 any content pushed here, will automatically published to the project GitHub Pages.
+The instructions can be found at
+[Creating Project Pages manually]
+(https://help.github.com/articles/creating-project-pages-manually)
 
 I use GitHub Pages feature to create the project **documentation** site,
 that can be found [here] (http://corerd.github.com/ADVProgressBar).
