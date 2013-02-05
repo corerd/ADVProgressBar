@@ -1,6 +1,7 @@
 var NAVTREE =
 [
-  [ "ADVProgressBar", "index.html", [
+  [ "ADVProgressBar for iOS", "index.html", [
+    [ "Design documentation", "index.html", null ],
     [ "ADVProgressBar for iOS", "md__r_e_a_d_m_e.html", null ],
     [ "Classes", null, [
       [ "Class List", "annotated.html", "annotated" ],
