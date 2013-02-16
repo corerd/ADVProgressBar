@@ -10,5 +10,6 @@ var interface_a_d_v_percent_progress_bar =
     [ "maxProgressValue", "interface_a_d_v_percent_progress_bar.html#afbdc5425bc86ac927d4bed69b2743388", null ],
     [ "minProgressValue", "interface_a_d_v_percent_progress_bar.html#aaa91de418503ead40015b21b5a201498", null ],
     [ "progress", "interface_a_d_v_percent_progress_bar.html#a657c2c41195e3a65d23a11367f2a0a40", null ],
+    [ "progressBarColor", "interface_a_d_v_percent_progress_bar.html#a51f8cf5ba0e89f5ad6a6261356131126", null ],
     [ "showPercent", "interface_a_d_v_percent_progress_bar.html#afc89fabd5a3f550d8cae564eb2ac4162", null ]
 ];
