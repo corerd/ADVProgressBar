@@ -6,6 +6,7 @@ var interface_a_d_v_percent_progress_bar =
       [ "ADVProgressBarBrown", "interface_a_d_v_percent_progress_bar.html#a1849ab9f08ed7103c555121b3b6106eda58796f358e6da973f358c3ad30f2f28e", null ],
       [ "ADVProgressBarBlue", "interface_a_d_v_percent_progress_bar.html#a1849ab9f08ed7103c555121b3b6106edaad4a92109d570197d65e45d985da63a4", null ]
     ] ],
+    [ "initWithCoder:", "interface_a_d_v_percent_progress_bar.html#a8b7afb3c6fd2c9168a25cafa70cff16c", null ],
     [ "initWithFrame:andProgressBarColor:", "interface_a_d_v_percent_progress_bar.html#a5053887e6c3aa1d22e2e1c8dc88bb87e", null ],
     [ "maxProgressValue", "interface_a_d_v_percent_progress_bar.html#afbdc5425bc86ac927d4bed69b2743388", null ],
     [ "minProgressValue", "interface_a_d_v_percent_progress_bar.html#aaa91de418503ead40015b21b5a201498", null ],

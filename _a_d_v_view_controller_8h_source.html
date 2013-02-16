@@ -136,20 +136,19 @@ $(document).ready(function(){initNavTree('_a_d_v_view_controller_8h_source.html'
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="comment"> THE SOFTWARE.</span></div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;<span class="comment"> */</span></div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#import &lt;UIKit/UIKit.h&gt;</span></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#import &quot;ADVPercentProgressBar.h&quot;</span></div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="code" href="interface_a_d_v_view_controller.html">   37</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_a_d_v_view_controller.html">ADVViewController</a> : UIViewController &lt;UIWebViewDelegate&gt;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;</div>
-<div class="line"><a name="l00040"></a><span class="lineno"><a class="code" href="interface_a_d_v_view_controller.html#a332cf1a67e59d78bd576ef116200635a">   40</a></span>&#160;<span class="keyword">@property</span> (weak, nonatomic) IBOutlet <a class="code" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> *<a class="code" href="interface_a_d_v_view_controller.html#a332cf1a67e59d78bd576ef116200635a" title="Custom UIView.">bigProgressBar</a>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;<span class="keyword">@property</span> (weak, nonatomic) IBOutlet <a class="code" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> *blueProgressBar;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSArray* percentProgressBars;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="keyword">@property</span> (nonatomic, strong) NSArray* integralProgressBars;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;-(IBAction)sliderValueChanged:(UISlider*)sender;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="keyword">@end</span></div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;<span class="preprocessor">#import &lt;UIKit/UIKit.h&gt;</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;<span class="preprocessor">#import &quot;ADVPercentProgressBar.h&quot;</span></div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;</div>
+<div class="line"><a name="l00047"></a><span class="lineno"><a class="code" href="interface_a_d_v_view_controller.html">   47</a></span>&#160;<span class="keyword">@interface </span><a class="code" href="interface_a_d_v_view_controller.html" title="ADVPercentProgressBar demo.">ADVViewController</a> : UIViewController</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;</div>
+<div class="line"><a name="l00050"></a><span class="lineno"><a class="code" href="interface_a_d_v_view_controller.html#add6242b5800f950d5d2cd3e69d0b1ea2">   50</a></span>&#160;<span class="keyword">@property</span> (weak, nonatomic) IBOutlet <a class="code" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> *<a class="code" href="interface_a_d_v_view_controller.html#add6242b5800f950d5d2cd3e69d0b1ea2" title="An ADVPercentProgressBar showing the integral value.">pbRangeValue</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;</div>
+<div class="line"><a name="l00053"></a><span class="lineno"><a class="code" href="interface_a_d_v_view_controller.html#af9d97893a4b7ea7894df6d73dbb694cf">   53</a></span>&#160;<span class="keyword">@property</span> (weak, nonatomic) IBOutlet <a class="code" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> *<a class="code" href="interface_a_d_v_view_controller.html#af9d97893a4b7ea7894df6d73dbb694cf" title="An ADVPercentProgressBar showing the percentage of the value.">pbRangePercent</a>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;-(IBAction)sliderValueChanged:(UISlider*)sender;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;<span class="keyword">@end</span></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

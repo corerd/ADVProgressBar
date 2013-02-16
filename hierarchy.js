@@ -11,8 +11,5 @@ var hierarchy =
     ] ],
     [ "UIViewController", null, [
       [ "ADVViewController", "interface_a_d_v_view_controller.html", null ]
-    ] ],
-    [ "<UIWebViewDelegate>", null, [
-      [ "ADVViewController", "interface_a_d_v_view_controller.html", null ]
     ] ]
 ];

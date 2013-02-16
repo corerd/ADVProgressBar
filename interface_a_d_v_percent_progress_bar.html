@@ -128,8 +128,11 @@ Inheritance diagram for ADVPercentProgressBar:</div>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Instance Methods</h2></td></tr>
 <tr class="memitem:a5053887e6c3aa1d22e2e1c8dc88bb87e"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_a_d_v_percent_progress_bar.html#a5053887e6c3aa1d22e2e1c8dc88bb87e">initWithFrame:andProgressBarColor:</a></td></tr>
-<tr class="memdesc:a5053887e6c3aa1d22e2e1c8dc88bb87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initializes and returns a newly allocated <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> view object.  <a href="#a5053887e6c3aa1d22e2e1c8dc88bb87e"></a><br/></td></tr>
+<tr class="memdesc:a5053887e6c3aa1d22e2e1c8dc88bb87e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override <code>initWithFrame</code> if the view is added programmatically.  <a href="#a5053887e6c3aa1d22e2e1c8dc88bb87e"></a><br/></td></tr>
 <tr class="separator:a5053887e6c3aa1d22e2e1c8dc88bb87e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b7afb3c6fd2c9168a25cafa70cff16c"><td class="memItemLeft" align="right" valign="top">(id)&#160;</td><td class="memItemRight" valign="bottom">- <a class="el" href="interface_a_d_v_percent_progress_bar.html#a8b7afb3c6fd2c9168a25cafa70cff16c">initWithCoder:</a></td></tr>
+<tr class="memdesc:a8b7afb3c6fd2c9168a25cafa70cff16c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Override <code>initWithCoder</code> if the view is loaded from a nib or storyboard.  <a href="#a8b7afb3c6fd2c9168a25cafa70cff16c"></a><br/></td></tr>
+<tr class="separator:a8b7afb3c6fd2c9168a25cafa70cff16c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-types"></a>
 Protected Types</h2></td></tr>
@@ -170,8 +173,37 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inte
 <p>The current <b>progress</b> is represented by a floating-point value (default 0.0) between <b>minProgressValue</b> and <b>maxProgressValue</b>, inclusive; values less or greater are pinned to those limits.</p>
 <p>The current <b>progress</b> is shown by the position of a cursor, coupled with the <b>progressImageView</b> and called <b>percentView</b>; within its bounds, it is shown a textual indication of the amount of the task that has completed. The way this indication is displayed, is controlled by the <b>showPercent</b> property: by default its value is <code>YES</code> and the current <b>progress</b> is formatted as a percent complete respect the range of values.</p>
 <p>The user can set to <code>NO</code> the <b>showPercent</b> property to display the integral amount of the task that has completed. Since the width of the <b>progressImageView</b> cursor is fixed to 3 textual characters wide, if <b>maxProgressValue</b> is greater than 999, then the current <b>progress</b> is formatted as a percent even if the <b>showPercent</b> property is set to <code>NO</code>.</p>
-<p>The <b>showPercent</b> property isn't taken in account also when the <b>maxProgressValue</b> is less or equal to 1.0: the current <b>progress</b> will be always formatted as a percent. </p>
+<p>The <b>showPercent</b> property isn't taken in account also when the <b>maxProgressValue</b> is less or equal to 1.0: the current <b>progress</b> will be always formatted as a percent.</p>
+<p>This Custom UIView can be created and instantiated both in-code (programmatically) or via a nib (storyboard). For this reason, are supported both <code>initWithFrame:andProgressBarColor:</code> and <code>initWithCoder:</code> methods respectively.</p>
+<p>CREDITS</p>
+<p><a href="http://stackoverflow.com/questions/8373176/how-is-view-initialized-when-loaded-via-a-storyboard">How is view initialized when loaded via a storyboard</a></p>
+<p><a href="http://stackoverflow.com/questions/6856879/iphone-getting-the-size-of-an-image-after-aspectft">iPhone : Getting the size of an image after AspectFt</a> </p>
 </div><h2 class="groupheader">Method Documentation</h2>
+<a class="anchor" id="a8b7afb3c6fd2c9168a25cafa70cff16c"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">- (id) initWithCoder: </td>
+          <td></td>
+          <td class="paramtype">(NSCoder *)&#160;</td>
+          <td class="paramname"><em>coder</em></td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Override <code>initWithCoder</code> if the view is loaded from a nib or storyboard. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">coder</td><td>A nib or storyboard object.</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>An <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> initialized from a nib or storyboard. </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="a5053887e6c3aa1d22e2e1c8dc88bb87e"></a>
 <div class="memitem">
 <div class="memproto">
@@ -196,8 +228,8 @@ BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="inte
       </table>
 </div><div class="memdoc">
 
-<p>Initializes and returns a newly allocated <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> view object. </p>
-<p>The view is allocated with the specified frame rectangle and the <b>progressImageView</b> horizontal bar color.</p>
+<p>Override <code>initWithFrame</code> if the view is added programmatically. </p>
+<p>Initializes and returns a newly allocated <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> view object. The view is allocated with the specified frame rectangle and the <b>progressImageView</b> horizontal bar color.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">frame</td><td>The frame rectangle for the view, measured in points. The origin of the frame is relative to the superview in which you plan to add it.</td></tr>
