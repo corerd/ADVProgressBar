@@ -98,13 +98,37 @@ $(document).ready(function(){initNavTree('index.html','');});
 <div class="title">Design documentation </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Define a Custom UIView to depict the progress of a task over time.The amount of <b>progress</b> is displayed by a multiple colors horizontal bar that represents a range of values.</p>
+<div class="textblock"><p>Define a Custom UIView to depict the progress of a task over time. The amount of <b>progress</b> is displayed by a multiple colors horizontal bar that represents a range of values.</p>
 <p>The current <b>progress</b> is shown by the position of a cursor with a textual indication of the amount of the task that has completed, as its value or percentage: </p>
 <div class="image">
 <img src="screenshot.jpg" alt="screenshot.jpg"/>
 </div>
-<p>This Custom UIView can be created and instantiated both in-code (programmatically) or via a nib (storyboard). </p>
-</div></div><!-- contents -->
+<h2>Using the <a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> View</h2>
+<p>This Custom UIView can be created and instantiated both in-code (programmatically) or via a nib (storyboard).</p>
+<p>Open MainStoryboard.storyboard and go to Editor Bounds Rectangles (this will make it easier to see what we’re doing).</p>
+<p>Then drag a UIView from the Object Library into the view controller, and resize it to look like the following: </p>
+<div class="image">
+<img src="storyboard0.jpg" alt="storyboard0.jpg"/>
+</div>
+<p>Then click on the UIView you added and go to the Identity Inspector. Set the class to <a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a>: </p>
+<div class="image">
+<img src="storyboard1.jpg" alt="storyboard1.jpg"/>
+</div>
+<p>Now connect this to outlets. Bring up the Assistant editor, and make sure that <a class="el" href="_a_d_v_view_controller_8h_source.html">ADVViewController.h</a> is visible and import the <a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> header. Control-drag from the UIView down between the @interface and @end lines, and connect it to an Outlet named as you like, say myCustomProgressBar. </p>
+<div class="image">
+<img src="storyboard2.jpg" alt="storyboard2.jpg"/>
+</div>
+<p>Repeat this for any other <a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> views you have to add.</p>
+<p>At this point <a class="el" href="_a_d_v_view_controller_8h_source.html">ADVViewController.h</a> should look like the following: </p>
+<div class="fragment"><div class="line"><span class="preprocessor">#import &lt;UIKit/UIKit.h&gt;</span></div>
+<div class="line"><span class="preprocessor">#import &quot;ADVPercentProgressBar.h&quot;</span></div>
+<div class="line"></div>
+<div class="line">\<span class="keyword">@interface </span><a class="code" href="interface_a_d_v_view_controller.html">ADVViewController</a> : UIViewController</div>
+<div class="line"></div>
+<div class="line">\@property (weak, nonatomic) IBOutlet <a class="code" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> *myCustomProgressBar;</div>
+<div class="line"></div>
+<div class="line">\@end</div>
+</div><!-- fragment --> </div></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
