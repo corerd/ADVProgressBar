@@ -81,19 +81,21 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="textblock"><p>Define the <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> class, that is a Custom UIView to depict the progress of a task over time. The amount of <b>progress</b> is displayed by a multiple colors horizontal bar that represents a range of values.</p>
 <p>The current <b>progress</b> is shown by the position of a cursor with the textual indication of the amount of the task that has completed. The amount can be displayed as integral value or a percentage of it.</p>
 <p>The <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> class can be created and instantiated both in-code (programmatically) or via a nib (storyboard).</p>
-<h2>Using the <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> Custom UIView</h2>
-<p>The <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> class is deployed together a demo app to show various use case scenarios. </p>
+<p>It is also deployed a demo app to show how to use this class in various scenarios. The source code can be found in the <code><a class="el" href="_a_d_v_view_controller_8h_source.html">ADVViewController.h</a></code> and <code>ADVViewController.m</code> files.</p>
+<p>The custom UIView class and the demo app have been developed as an Xcode 4.5.2 project for iPhone devices targeting iOS 5.0.</p>
+<h1>Using the <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> Custom UIView</h1>
+<p>The demo app looks like this: </p>
 <div class="image">
 <img src="screenshot.jpg" alt="screenshot.jpg"/>
 </div>
-<p>The custom UIView class and the demo app have been developed as an Xcode 4.5.2 project for iPhone devices targeting iOS 5.0.</p>
-<p>To achieve the same demo app yourself, open Xcode and create a new project with the <code>iOS\Application\Single View Application template</code> and name it <code>ADVProgressBar</code>. Enter ADV as Class Prefix; make sure the Device Family is set to iPhone, <code>Use Storyboard</code> and <code>Use Automatic Reference Counting</code> are checked.</p>
+<p>To achieve the same yourself, open Xcode and create a new project with the <code>iOS\Application\Single View Application</code> template and name it <code>ADVProgressBar</code>. Enter ADV as Class Prefix; make sure the Device Family is set to iPhone, <code>Use Storyboard</code> and <code>Use Automatic Reference Counting</code> are checked.</p>
 <p>Add <code><a class="el" href="_a_d_v_percent_progress_bar_8h_source.html">ADVPercentProgressBar.h</a></code> and <code>ADVPercentProgressBar.m</code> to your project.</p>
 <p>Open <code>MainStoryboard.storyboard</code> and go to <code>Editor\Canvas\Show Bounds Rectangles</code> (this will make it easier to see what we’re doing). </p>
 <div class="image">
 <img src="editorMenu.jpg" alt="editorMenu.jpg"/>
 </div>
-<p>Then drag a <code>UIView</code> from the <code>Object Library</code> into the view controller. </p>
+<h2>Configuring the View</h2>
+<p>Drag a <code>UIView</code> from the <code>Object Library</code> into the view controller. </p>
 <div class="image">
 <img src="storyboard0.jpg" alt="storyboard0.jpg"/>
 </div>
@@ -101,7 +103,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="image">
 <img src="storyboard1.jpg" alt="storyboard1.jpg"/>
 </div>
-<p>Now connect this to outlets.</p>
+<p>You won't be able to see what the <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> custom subview actually looks like in the storyboard canvas, you'll see just its bounds.</p>
+<p>Now connect the custom subview to outlets.</p>
 <p>Bring up the Assistant editor and make sure that the view controller’s header file <code><a class="el" href="_a_d_v_view_controller_8h_source.html">ADVViewController.h</a></code> is displayed.</p>
 <p>Add an <code>#import</code> directive to include the <code><a class="el" href="_a_d_v_percent_progress_bar_8h_source.html">ADVPercentProgressBar.h</a></code> header.</p>
 <p>On the canvas, Control-drag from the <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> UIView to the method declaration area in <code><a class="el" href="_a_d_v_percent_progress_bar_8h_source.html">ADVPercentProgressBar.h</a></code> (that is, between the @interface statement and the @end statement).</p>
@@ -125,7 +128,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <p>In the Connection pop-up menu, choose <code>Action</code>.</p>
 <p>In the Name field, enter <code>sliderValueChanged:</code>.</p>
 <p>Make sure that the Type field contains <code>UISlider</code>.</p>
-<p>Make sure that the Event pop-up menu contains <code>Value Changed</code>. You specify the Value Changed event because you want the message to be sent when the user slides the finger along the track.</p>
+<p>Make sure that the Event pop-up menu contains <code>Value Changed</code>. You specify the Value Changed event because you want the message to be sent when the user slides the thumb along the track.</p>
 <p>Make sure that the Arguments pop-up menu contains <code>Sender</code>. </p>
 <div class="image">
 <img src="storyboard3.jpg" alt="storyboard3.jpg"/>
@@ -146,7 +149,18 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="image">
 <img src="storyboard4.jpg" alt="storyboard4.jpg"/>
 </div>
- </div></div><!-- contents -->
+<h2>Implementing the View Controller</h2>
+<p>Select <code>ADVViewController.m</code> in the project navigator and find the <code>viewDidLoad</code> stub implementation that Xcode added for you.</p>
+<p>Before the <code>[super viewDidLoad];</code> statement, create and instantiate programmatically a bunch of <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> custom views.</p>
+<p>As you can see in the provided <code>ADVViewController.m</code> file, this follows the pattern: </p>
+<div class="fragment"><div class="line"><a class="code" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> *progressBar =</div>
+<div class="line">[[<a class="code" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a> alloc] initWithFrame:CGRectMake(X, Y, hDim, vDim)</div>
+<div class="line">                         andProgressBarColor:someADVProgressBarColor];</div>
+<div class="line"></div>
+<div class="line"><span class="comment">// set ADVPercentProgressBar instance properties</span></div>
+</div><!-- fragment --><p>After the <code>[super viewDidLoad];</code> statement, set the properties of the <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> views loaded from storyboard. In this case they are not required the origin point and the size of the views because they have been implicitly set when drown.</p>
+<p>Finally, complete the stub implementation of the <code>sliderValueChanged:</code> method to animate the progress bars when the user slides the thumb along the track. I have used the <code>percentProgressBars</code> and <code>integralProgressBars</code> arrays to keep track of the <code><a class="el" href="interface_a_d_v_percent_progress_bar.html" title="Define a Custom UIView to depict the progress of a task over time.">ADVPercentProgressBar</a></code> views. </p>
+</div></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">
